@@ -1,0 +1,34 @@
+# Server Configuration
+Server:
+  # Port the server listens on
+  Port: 9000
+  # Maximum time to read request data
+  ReadTimeout: "10s"
+  # Maximum time to write response data
+  WriteTimeout: "10s"
+  # Maximum connections allowed per IP
+  MaxConnsPerIP: 50
+  # Maximum requests allowed per connection
+  MaxRequestsPerConn: 100
+  # Reduce memory usage
+  ReduceMemoryUsage: true
+  # Allow only GET requests
+  GetOnly: true
+
+# Application Configuration
+Application:
+  # Enable or disable mock mode
+  MockFlag: false
+  # Enable or disable debug mode
+  DebugMode: false
+  # Cache size for external http requests
+  CacheSize: 1000
+  # Number of workers for backend client
+  Workers: 20
+
+# Limiter Configuration
+Limiter:
+  # Maximum number of allowed requests
+  Limit: 1000
+  # Time period for the rate limiter
+  Period: "10s"
